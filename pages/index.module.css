@@ -1,11 +1,11 @@
 @font-face {
   font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
-      format("woff2"),
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
     url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "ColfaxAI";
   src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
@@ -14,119 +14,153 @@
   font-style: normal;
 }
 
-.body{
+
+
+.container {
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+  background-color: rgb(41, 37, 37);  
+}
+
+.body {
   background-color: rgba(90, 82, 82, 0.1);
 }
 
-.main,
-.main input {
-  font-size: 16px;
-  line-height: 24px;
-  color: #353740;
-  font-family: "ColfaxAI", Helvetica, sans-serif;
-}
+
 .main {
+  color:white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
 }
-.main .icon {
-  width: 34px;
+.main .idk{
+  margin-top: 10px;
+  font-size: 40px;
 }
-.main h3 {
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: bold;
-  color: #202123;
-  margin: 16px 0 40px;
+
+.icon {
+  width: 40px;
+  margin-top: -50px;
+  
 }
-.main form {
+
+
+
+.messageContainer {
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  width: 302px;
-}
-.main input[type="text"] {
-  padding: 12px 16px;
-  border: 1px solid #10a37f;
-  border-radius: 4px;
-  margin-bottom: 24px;
-  outline-color: #10a37f;
-}
-.main ::placeholder {
-  color: #8e8ea0;
-  opacity: 1;
-}
-.main input[type="submit"] {
-  padding: 12px 0;
-  color: #fff;
-  background-color: #10a37f;
-  border: none;
-  border-radius: 4px;
-  text-align: center;
-  cursor: pointer;
-}
-.main .result {
-  font-weight: bold;
-  margin-top: 40px;
+  align-items: flex-start;
+  margin-top: -20px;
+  background-color: gray;
 }
 
-
-.main .chatBox {
-  
-  overflow: auto;
+.message {
+  min-width: 370px;
   padding: 10px;
-}
-.chatContainer {
-  
-  min-height: 20px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: lightgray;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.chat-message {
-  padding: 10px;
-  margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .user {
-
-  min-height: 20px;
-  margin: 0 auto;
-  padding: 20px;
   background-color: black;
   color: #fff;
-  font-size: 20px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
- 
 }
 
 .assistant {
-  min-width: 400px;
-  max-width: 400px;
-  min-height: 20px;
-  margin: 0 auto;
-  padding: 20px;
   background-color: #272a2b;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
- 
+  color: #fff;
+  display: flex; /* Add display:flex to create a flex container */
+  align-items: center; /* Center align items vertically */
 }
 
-.message-text pre code {
+.assistant .content {
+  margin-left: 10px; /* Add margin to create space between the logo and text */
+}
+
+.assistant .icon {
+  margin-top: 0px;
+  width: 24px;
+  margin-right: 10px; /* Add margin to create space between the logo and text */
+}
+
+.message p {
+  margin: 0;
+}
+
+.message pre code {
   font-size: 14px;
   white-space: pre-wrap;
+}
+
+.form {
+  display: flex;
+}
+
+.input {
+  margin-top: 10px;
+  height: 50px;
+  font-size: 16px;
+  width:320px;
+  flex: 1;
+  padding: 16px 16px;
+  border: 2px solid #10a37f;
+  border-radius: 10px;
+  margin-right: 10px;
+  outline-color: #10a37f;
+}
+
+.input::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+
+.button {
+  margin-top: 10px;
+  width: 150px;
+  font-size: 12px;
+  padding: 16px 0;
+  color: #fff;
+  background-color: #10a37f;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.code {
+  color: #FF8400; /* Replace with the desired color for code */
+}
+/* Default styles */
+
+/* Add your default styles here */
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  /* Styles for mobile devices with a maximum width of 600px */
+  
+  /* Update the styles to make them more suitable for mobile devices */
+  .main {
+    padding-top: 40px; /* Adjust the spacing for mobile */
+  }
+
+  .main h3 {
+    font-size: 24px; /* Adjust the font size for mobile */
+    line-height: 32px; /* Adjust the line height for mobile */
+    margin: 10px 0 30px; /* Adjust the margins for mobile */
+  }
+
+  .main form {
+    width: 100%; /* Adjust the width to occupy the full width on mobile */
+  }
+
+  .input {
+    width: 100%; /* Adjust the input width to occupy the full width on mobile */
+    margin-right: 0; /* Remove the right margin on mobile */
+  }
+  
+  /* Add any other mobile-specific styles here */
 }
