@@ -14,21 +14,22 @@
   font-weight: bold;
   font-style: normal;
 }
-
+  .html {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 .container {
   font-family: "ColfaxAI", Helvetica, sans-serif;
   background-color: rgb(41, 37, 37);
-  height: 120vh; /* Adjust height to fill the entire viewport */
+  height: 100%fit-content; /* Adjust height to fill the entire viewport */
   margin: 0;
   padding: 0;
 }
 
-.body {
-  background-color: rgba(90, 82, 82, 0.1);
- 
-}
-
 .main {
+  overflow: hidden;
   color: white;
   display: flex;
   flex-direction: column;
@@ -57,14 +58,22 @@
   margin-top: -20px;
   background-color: gray;
   padding: 10px; /* Add padding for mobile */
-   word-wrap: break-word;
 }
 
+
 .message {
-  min-width: 98.5%; /* Adjust the width for mobile */
+  min-width: 95%; /* Adjust the width for mobile */
+  max-width: 95%;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  /* Apply styles for screens larger than 768px */
+  .message {
+    min-width: 98.5%; /* Adjust the width for larger screens */
+  }
 }
 
 .user {
@@ -127,7 +136,7 @@
 
 .button {
   height:50px;
-  width: 80px; /* Adjust the width of the button as needed */
+  width: 70px; /* Adjust the width of the button as needed */
   font-size: 12px;
   padding: 16px 0;
   color: #fff;
