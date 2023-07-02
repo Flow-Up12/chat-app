@@ -120,7 +120,6 @@
     width: 1000px; /* Adjust the width for larger screens */
   }
 }
-
 .input {
   width: 85%;
   flex: 1; /* Allow the input to grow and occupy remaining space */
