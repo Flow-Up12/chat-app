@@ -1,65 +1,46 @@
-@font-face {
-  font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
-    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
-    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
-
-
 .container {
   font-family: "ColfaxAI", Helvetica, sans-serif;
-  background-color: rgb(41, 37, 37);  
+  background-color: rgb(41, 37, 37);
+  height: 100vh; /* Adjust height to fill the entire viewport */
 }
 
 .body {
   background-color: rgba(90, 82, 82, 0.1);
 }
 
-
 .main {
-  color:white;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 40px; /* Adjust the spacing for mobile */
 }
-.main .idk{
+
+.main .idk {
   margin-top: 10px;
-  font-size: 40px;
+  font-size: 24px; /* Adjust the font size for mobile */
 }
 
 .icon {
   width: 40px;
   margin-top: -50px;
-  
 }
-
-
 
 .messageContainer {
   border-radius: 10px;
-  width: 400px;
-  height: 500px;
+  width: 100%;
+  height: calc(100vh - 240px); /* Adjust the height for mobile */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: -20px;
   background-color: gray;
+  padding: 10px; /* Add padding for mobile */
 }
 
 .message {
-  min-width: 370px;
+  min-width: 80%; /* Adjust the width for mobile */
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -98,18 +79,18 @@
 
 .form {
   display: flex;
+  flex-direction: column; /* Adjust the flex direction for mobile */
 }
 
 .input {
   margin-top: 10px;
   height: 50px;
   font-size: 16px;
-  width:320px;
-  flex: 1;
+  width: 100%; /* Adjust the input width to occupy the full width on mobile */
   padding: 16px 16px;
   border: 2px solid #10a37f;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-bottom: 10px; /* Add margin bottom for mobile */
   outline-color: #10a37f;
 }
 
@@ -119,8 +100,7 @@
 }
 
 .button {
-  margin-top: 10px;
-  width: 150px;
+  width: 100%; /* Adjust the button width to occupy the full width on mobile */
   font-size: 12px;
   padding: 16px 0;
   color: #fff;
@@ -129,38 +109,4 @@
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-}
-
-.code {
-  color: #FF8400; /* Replace with the desired color for code */
-}
-/* Default styles */
-
-/* Add your default styles here */
-
-/* Mobile styles */
-@media (max-width: 600px) {
-  /* Styles for mobile devices with a maximum width of 600px */
-  
-  /* Update the styles to make them more suitable for mobile devices */
-  .main {
-    padding-top: 40px; /* Adjust the spacing for mobile */
-  }
-
-  .main h3 {
-    font-size: 24px; /* Adjust the font size for mobile */
-    line-height: 32px; /* Adjust the line height for mobile */
-    margin: 10px 0 30px; /* Adjust the margins for mobile */
-  }
-
-  .main form {
-    width: 100%; /* Adjust the width to occupy the full width on mobile */
-  }
-
-  .input {
-    width: 100%; /* Adjust the input width to occupy the full width on mobile */
-    margin-right: 0; /* Remove the right margin on mobile */
-  }
-  
-  /* Add any other mobile-specific styles here */
 }
