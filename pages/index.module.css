@@ -1,11 +1,30 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 .container {
   font-family: "ColfaxAI", Helvetica, sans-serif;
   background-color: rgb(41, 37, 37);
-  height: 100vh; /* Adjust height to fill the entire viewport */
+  height: 120vh; /* Adjust height to fill the entire viewport */
+  margin: 0;
+  padding: 0;
 }
 
 .body {
   background-color: rgba(90, 82, 82, 0.1);
+ 
 }
 
 .main {
@@ -13,7 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px; /* Adjust the spacing for mobile */
+  padding-top: 60px; /* Adjust the spacing for mobile */
 }
 
 .main .idk {
@@ -28,8 +47,8 @@
 
 .messageContainer {
   border-radius: 10px;
-  width: 100%;
-  height: calc(100vh - 240px); /* Adjust the height for mobile */
+  width: 80%;
+  height: calc(100vh - 200px); /* Adjust the height for mobile */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
