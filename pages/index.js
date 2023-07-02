@@ -63,7 +63,7 @@ import hljs from "highlight.js";
 
         <main className={styles.main}>
           <img src="/ChatGPT_logo.png" className={styles.icon} alt="ChatGPT Logo" />
-          <h3 className={styles.idk}>Ask anything</h3>
+          <h3 classNamcde={styles.idk}>Ask anything</h3>
           <div className={styles.messageContainer}>
             {messages.map((message, index) => (
             <div
