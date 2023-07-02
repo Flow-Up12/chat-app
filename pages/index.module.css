@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "ColfaxAI";
   src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
@@ -96,11 +97,18 @@
   white-space: pre-wrap;
 }
 
+
 .form {
-  width:600px;
+  width:320px;
   display: flex;
   flex-direction: row; /* Adjust the flex direction to be horizontal */
   align-items: center; /* Align items vertically in the center */
+}
+@media (min-width: 768px) {
+  /* Apply styles for screens larger than 768px */
+  .form {
+    width: 1000px; /* Adjust the width for larger screens */
+  }
 }
 
 .input {
@@ -118,7 +126,7 @@
 
 .button {
   height:50px;
-  width: 15%; /* Adjust the width of the button as needed */
+  width: 80px; /* Adjust the width of the button as needed */
   font-size: 12px;
   padding: 16px 0;
   color: #fff;
