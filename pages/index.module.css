@@ -59,7 +59,7 @@
 }
 
 .message {
-  min-width: 80%; /* Adjust the width for mobile */
+  min-width: 98.5%; /* Adjust the width for mobile */
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -82,7 +82,7 @@
 }
 
 .assistant .icon {
-  margin-top: 0px;
+  margin-top:0px;
   width: 24px;
   margin-right: 10px; /* Add margin to create space between the logo and text */
 }
@@ -97,29 +97,28 @@
 }
 
 .form {
+  width:600px;
   display: flex;
-  flex-direction: column; /* Adjust the flex direction for mobile */
+  flex-direction: row; /* Adjust the flex direction to be horizontal */
+  align-items: center; /* Align items vertically in the center */
 }
 
 .input {
+  width: 85%;
+  flex: 1; /* Allow the input to grow and occupy remaining space */
   margin-top: 10px;
   height: 50px;
   font-size: 16px;
-  width: 100%; /* Adjust the input width to occupy the full width on mobile */
   padding: 16px 16px;
   border: 2px solid #10a37f;
   border-radius: 10px;
-  margin-bottom: 10px; /* Add margin bottom for mobile */
+  margin-bottom: 10px;
   outline-color: #10a37f;
 }
 
-.input::placeholder {
-  color: #8e8ea0;
-  opacity: 1;
-}
-
 .button {
-  width: 100%; /* Adjust the button width to occupy the full width on mobile */
+  height:50px;
+  width: 15%; /* Adjust the width of the button as needed */
   font-size: 12px;
   padding: 16px 0;
   color: #fff;
@@ -128,4 +127,6 @@
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
+  margin-left: 10px; /* Add margin between the input and the button */
 }
+

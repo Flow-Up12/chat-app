@@ -1,6 +1,11 @@
   import Head from "next/head";
   import { useState } from "react";
   import styles from "./index.module.css";
+  import "highlight.js/styles/github.css";
+import hljs from "highlight.js";
+
+
+  
 
   export default function Home() {
     const [animalInput, setAnimalInput] = useState("");
@@ -28,8 +33,7 @@
         // Check if the response has a code block
         const hasCodeBlock = data.result.includes("```");
         if (hasCodeBlock) {
-          // If the response has a code block, wrap it in a <pre><code> element
-          const codeContent = data.result.replace(/```([\s\S]+?)```/g, '</p><pre><code class="${styles.code}">$1</code></pre><p>');
+          const codeContent = data.result.replace(/```([\s\S]+?)```/g, '</p><pre><code class="${styles.code} hljs">$1</code></pre><p>');
           newResponse.content = `<p>${codeContent}</p>`;
         } else {
           // Split the response into paragraphs
@@ -40,11 +44,15 @@
 
         setMessages((prevMessages) => [...prevMessages, newMessage, newResponse]);
         setAnimalInput("");
+        setTimeout(() => {
+          hljs.highlightAll();
+        }, 10);
       } catch (error) {
         console.error(error);
         alert(error.message);
       }
     }
+    
     
     return (
       <div className={styles.container}>
@@ -55,7 +63,7 @@
 
         <main className={styles.main}>
           <img src="/ChatGPT_logo.png" className={styles.icon} alt="ChatGPT Logo" />
-          <h3 className={styles.idk}>Ask anything</h3>
+          <h3 classNamcde={styles.idk}>Ask anything</h3>
           <div className={styles.messageContainer}>
             {messages.map((message, index) => (
             <div
@@ -81,10 +89,15 @@
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
             className={styles.input}
-          />
-          <input type="submit" value="Generate Response" className={styles.button} />
+          />  
+          <input type="image" src="/enter.png" value="Generate Response" alt="submit" className={styles.button}/>
         </form>
         </main>
+        
+      
+
+        
       </div>
+      
     );
   }
