@@ -14,6 +14,8 @@
   font-weight: bold;
   font-style: normal;
 }
+
+
   .html {
   overflow: hidden;
   height: 100%;
@@ -43,6 +45,7 @@
 }
 
 .icon {
+  
   width: 40px;
   margin-top: -50px;
 }
@@ -62,8 +65,8 @@
 
 
 .message {
-  min-width: 90%; /* Adjust the width for mobile */
-  max-width: 90%;
+  min-width: 92%; /* Adjust the width for mobile */
+  max-width: 92%;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -79,6 +82,8 @@
 .user {
   background-color: black;
   color: #fff;
+  display: flex; /* Add display:flex to create a flex container */
+  align-items: center; /* Center align items vertically */
 }
 
 .assistant {
@@ -91,15 +96,23 @@
 .assistant .content {
   margin-left: 10px; /* Add margin to create space between the logo and text */
 }
+.user .content {
+  margin-left: 10px; /* Add margin to create space between the logo and text */
+}
+.user .icon{
+  margin-top:0px;
+  width: 24px;
+  margin-right: 10px; /* Add margin to create space between the logo and text */
+}
 
-.assistant .icon {
+.assistant .icon, .user .icon{
   margin-top:0px;
   width: 24px;
   margin-right: 10px; /* Add margin to create space between the logo and text */
 }
 
 .message p {
-  margin: 0;
+  margin: 0px;
 }
 
 .message pre code {

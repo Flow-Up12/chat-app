@@ -39,7 +39,7 @@ export default function Home() {
       } else {
         // Split the response into paragraphs
         const paragraphs = data.result.split("\n\n");
-        const formattedContent = paragraphs.map((paragraph) => `<p>${paragraph}</p>\n`).join("");
+        const formattedContent = paragraphs.join("<br><br>");
         newResponse.content = formattedContent;
       }
 
@@ -59,7 +59,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img src="/ChatGPT_logo.png" className={styles.icon} alt="ChatGPT Logo" />
+      
+      
+      <img src="/ChatGPT_logo.png" className={styles.icon} alt="ChatGPT Logo" />
+      
+ 
         <h3 className={styles.idk}>Ask anything</h3>
         <div className={styles.messageContainer}>
           {messages.map((message, index) => (
@@ -81,7 +85,17 @@ export default function Home() {
                 </div>
               )}
               {message.role !== "assistant" && (
-                <div>{message.content}</div>
+                 <div className={styles.user}>
+                 <img src="/user.png" className={styles.icon} alt="User Logo" />
+                 {message.content.includes("<") ? (
+                   <div
+                     className={styles.content}
+                     dangerouslySetInnerHTML={{ __html: message.content }}
+                   />
+                 ) : (
+                   <div>{message.content}</div>
+                 )}
+               </div>
               )}
             </div>
           ))}
@@ -97,6 +111,7 @@ export default function Home() {
           <input type="image" src="/enter.png" value="Generate Response" alt="submit" className={styles.button} />
         </form>
       </main>
+    
     </div>
   );
 }
